@@ -9,8 +9,8 @@
   opacity: 0.6 !important;       /* 取值范围是 0 到 1。0 是完全透明，1 是完全不透明，0.8 表示 80% 的可见度 */
   
   /* 3. 改变位置 */
-  position: relative !important; /* 开启相对定位 */
-  top: 40vh !important;          /* 正数向下移动，负数（如 -20px）向上移动 */
+  /* position: relative !important; */ /* 开启相对定位 */
+  /* top: 40vh !important;          /* 正数向下移动，负数（如 -20px）向上移动 */
   /* left: 10px !important; */   /* 如果需要左右移动，可以取消这行的注释并修改数值 */
   
   /* [可选] 如果你想改变字体颜色，也可以在这里加 */
@@ -28,6 +28,6 @@
   opacity: 0.8 !important;     /* 取值 0 到 1 */
   
   /* 3. 改变位置 (单独移动主标题) */
-  position: relative !important;
-  top: 5vh !important;         /* 使用 vh 保持多端响应式 */
+  /* position: relative !important; */
+  /* top: 5vh !important;         /* 使用 vh 保持多端响应式 */
 }
