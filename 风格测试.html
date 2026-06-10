@@ -1,0 +1,812 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>沉底的鱼 | 沉底的鱼</title><meta name="author" content="cddy"><meta name="copyright" content="cddy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="STUPID TODO — Retro Terminal Task Manager  :root {   --phosphor-green: #00ff41;   --phosphor-dim: #00cc33;   --amber-warning: #ffb000;   --red-alert: #ff2d00;   --paper-white: #f5f5dc;   --meta">
+<meta property="og:type" content="website">
+<meta property="og:title" content="沉底的鱼">
+<meta property="og:url" content="http://example.com/%E9%A3%8E%E6%A0%BC%E6%B5%8B%E8%AF%95.html">
+<meta property="og:site_name" content="沉底的鱼">
+<meta property="og:description" content="STUPID TODO — Retro Terminal Task Manager  :root {   --phosphor-green: #00ff41;   --phosphor-dim: #00cc33;   --amber-warning: #ffb000;   --red-alert: #ff2d00;   --paper-white: #f5f5dc;   --meta">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2026-06-10T09:25:38.296Z">
+<meta property="article:modified_time" content="2026-06-10T09:10:37.541Z">
+<meta property="article:author" content="cddy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/%E9%A3%8E%E6%A0%BC%E6%B5%8B%E8%AF%95.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":"true ;","highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '沉底的鱼',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css"><style>
+#custom-preloader {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: #FF7242;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+#custom-preloader img {
+  width: 180px;
+  height: auto;
+  border-radius: 16px;
+}
+</style>
+<link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/./images/bj.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/portfolio/"><i class="fa-fw fas fa-camera"></i><span> 摄影作品集</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/./images/top.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">沉底的鱼</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/portfolio/"><i class="fa-fw fas fa-camera"></i><span> 摄影作品集</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title"></h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#00ff41"/>
+<meta name="color-scheme" content="dark"/>
+<title>STUPID TODO — Retro Terminal Task Manager</title>
+<style>
+:root {
+  --phosphor-green: #00ff41;
+  --phosphor-dim: #00cc33;
+  --amber-warning: #ffb000;
+  --red-alert: #ff2d00;
+  --paper-white: #f5f5dc;
+  --metal-silver: #c0c0c0;
+  --terminal-black: #0a0a0a;
+  --terminal-dark: #1a1a1a;
+  --font-mono: 'SF Mono', 'Monaco', 'Menlo', 'DejaVu Sans Mono', 'Courier New', monospace;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+}
+@media (min-width: 768px) {
+  :root {
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-mono);
+  background: var(--terminal-black);
+  color: var(--phosphor-green);
+  font-size: 14px;
+  line-height: 1.4;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+.crt-monitor {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  background: var(--terminal-black);
+  border: 3px solid var(--metal-silver);
+  border-radius: 8px;
+  padding: var(--space-md);
+  box-shadow: 0 0 8px rgba(0,255,65,0.15), inset 0 0 20px rgba(0,0,0,0.5);
+  min-height: 200px;
+}
+@media (min-width: 768px) {
+  .crt-monitor {
+    padding: var(--space-xl);
+    border-radius: 12px;
+    min-height: 300px;
+  }
+}
+.crt-monitor::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,65,0.03) 2px, rgba(0,255,65,0.03) 4px);
+  pointer-events: none;
+  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  .crt-monitor::before { border-radius: 12px; }
+}
+@media (min-width: 1024px) {
+  .crt-monitor::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 70%, rgba(0,0,0,0.2) 100%);
+    pointer-events: none;
+    border-radius: 12px;
+  }
+}
+.terminal-text {
+  font-family: var(--font-mono);
+  color: var(--phosphor-green);
+  text-shadow: 0 0 2px currentColor;
+  letter-spacing: 0.5px;
+}
+.terminal-text--dim { color: var(--phosphor-dim); text-shadow: none; }
+.terminal-text--amber { color: var(--amber-warning); text-shadow: 0 0 2px var(--amber-warning); }
+.terminal-text--red { color: var(--red-alert); text-shadow: 0 0 2px var(--red-alert); }
+.blinking-cursor::after {
+  content: '█';
+  color: var(--phosphor-green);
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.vintage-btn {
+  font-family: var(--font-mono);
+  background: linear-gradient(135deg, #333, #222);
+  color: var(--phosphor-green);
+  border: 2px solid var(--metal-silver);
+  border-radius: 4px;
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  min-height: 44px;
+  font-size: 12px;
+}
+.vintage-btn:hover {
+  background: linear-gradient(135deg, #444, #333);
+  box-shadow: 0 0 2px rgba(0,255,65,0.2);
+  text-shadow: 0 0 1px currentColor;
+}
+.vintage-btn:active { transform: translateY(1px); box-shadow: inset 0 2px 5px rgba(0,0,0,0.5); }
+.vintage-btn--danger { color: var(--red-alert); }
+.vintage-btn--warning { color: var(--amber-warning); }
+.vintage-btn--active {
+  background: var(--phosphor-green);
+  color: var(--terminal-black);
+  box-shadow: 0 0 5px rgba(0,255,65,0.4);
+}
+.control-panel {
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  border: 2px solid var(--metal-silver);
+  border-radius: 6px;
+  padding: var(--space-md);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+@media (min-width: 768px) {
+  .control-panel { gap: var(--space-md); }
+}
+.todo-input {
+  flex: 1;
+  background: var(--terminal-black);
+  border: 2px solid var(--metal-silver);
+  border-radius: 4px;
+  color: var(--phosphor-green);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: var(--space-sm) var(--space-md);
+  min-height: 44px;
+}
+.todo-input:focus {
+  outline: none;
+  border-color: var(--phosphor-green);
+  box-shadow: 0 0 8px rgba(0,255,65,0.5);
+}
+.todo-input::placeholder { color: var(--phosphor-dim); opacity: 0.7; }
+.status-led {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-right: var(--space-sm);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.5), 0 0 3px rgba(0,0,0,0.3);
+}
+.status-led--green { background: var(--phosphor-green); box-shadow: inset 0 1px 2px rgba(0,0,0,0.5), 0 0 4px rgba(0,255,65,0.4); }
+.status-led--amber { background: var(--amber-warning); box-shadow: inset 0 1px 2px rgba(0,0,0,0.5), 0 0 4px rgba(255,176,0,0.4); }
+.status-led--red { background: var(--red-alert); box-shadow: inset 0 1px 2px rgba(0,0,0,0.5), 0 0 4px rgba(255,45,0,0.4); }
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+.title-section { display: flex; align-items: center; gap: var(--space-sm); }
+.todo-stats { font-size: 12px; display: flex; align-items: center; gap: var(--space-sm); }
+.retro-progress-track {
+  height: 20px;
+  background: #000;
+  border: 2px inset var(--metal-silver);
+  box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #fff, inset -2px -2px 0 #404040, inset 2px 2px 0 #dfdfdf;
+  overflow: hidden;
+  image-rendering: pixelated;
+  margin-bottom: var(--space-md);
+}
+.retro-progress-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+  background: var(--phosphor-green);
+  border-top: 2px solid rgba(255,255,255,0.8);
+  border-left: 2px solid rgba(255,255,255,0.6);
+  border-bottom: 2px solid rgba(0,0,0,0.6);
+  border-right: 2px solid rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+.retro-progress-fill.ultra-pixelated {
+  background-image:
+    repeating-linear-gradient(90deg, currentColor 0px, currentColor 4px, rgba(255,255,255,0.4) 4px, rgba(255,255,255,0.4) 6px, currentColor 6px, currentColor 10px, rgba(0,0,0,0.3) 10px, rgba(0,0,0,0.3) 12px),
+    repeating-linear-gradient(0deg, currentColor 0px, currentColor 4px, rgba(0,0,0,0.2) 4px, rgba(0,0,0,0.2) 6px, currentColor 6px, currentColor 10px, rgba(255,255,255,0.2) 10px, rgba(255,255,255,0.2) 12px);
+  border-top: 3px solid rgba(255,255,255,0.9);
+  border-left: 3px solid rgba(255,255,255,0.7);
+  border-bottom: 3px solid rgba(0,0,0,0.7);
+  border-right: 3px solid rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3), inset 0 0 6px rgba(0,0,0,0.4), 0 0 4px currentColor;
+}
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-xs);
+}
+.label-lazy { color: var(--red-alert); text-shadow: 0 0 4px var(--red-alert); animation: pulse-red 2s infinite; }
+.label-productive { color: var(--phosphor-green); text-shadow: 0 0 4px var(--phosphor-green); animation: glow-green 3s infinite; }
+@keyframes pulse-red { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+@keyframes glow-green { 0%,100% { opacity: 1; } 50% { opacity: 0.8; } }
+.todo-list { list-style: none; margin-top: var(--space-md); }
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--metal-silver);
+  border-top: none;
+  background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+  min-height: 44px;
+  transition: background 0.2s;
+}
+.todo-item:first-child { border-top: 1px solid var(--metal-silver); }
+.todo-item:last-child { border-bottom: 2px solid var(--metal-silver); }
+.todo-item:hover { background: linear-gradient(135deg, #2a2a2a, #1a1a1a); }
+.todo-check {
+  width: 20px; height: 20px;
+  border: 2px solid var(--metal-silver);
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #000;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: var(--phosphor-green);
+}
+.todo-check:hover { border-color: var(--phosphor-green); box-shadow: 0 0 4px rgba(0,255,65,0.3); }
+.todo-check.checked {
+  background: var(--phosphor-green);
+  border-color: var(--phosphor-green);
+  color: #000;
+  box-shadow: 0 0 6px rgba(0,255,65,0.5);
+}
+.todo-text {
+  flex: 1;
+  font-size: 14px;
+  word-break: break-word;
+  transition: all 0.3s;
+}
+.todo-text.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: var(--phosphor-dim);
+}
+.todo-delete {
+  background: none;
+  border: none;
+  color: var(--red-alert);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px 8px;
+  opacity: 0.5;
+  transition: all 0.2s;
+  font-family: var(--font-mono);
+}
+.todo-delete:hover { opacity: 1; text-shadow: 0 0 4px var(--red-alert); }
+.filter-bar {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.filter-bar .vintage-btn { padding: var(--space-xs) var(--space-sm); min-height: 36px; font-size: 11px; }
+.empty-state {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--phosphor-dim);
+  font-size: 13px;
+}
+.ticker-tape {
+  overflow: hidden;
+  background: rgba(0,255,65,0.05);
+  border-top: 1px solid var(--metal-silver);
+  border-bottom: 1px solid var(--metal-silver);
+  padding: 6px 0;
+  margin-bottom: var(--space-md);
+  white-space: nowrap;
+  font-size: 11px;
+}
+.ticker-content {
+  display: inline-block;
+  animation: ticker-scroll 20s linear infinite;
+}
+.ticker-content span { margin-right: 40px; }
+.ticker-content .green { color: var(--phosphor-green); }
+.ticker-content .amber { color: var(--amber-warning); }
+.ticker-content .red { color: var(--red-alert); }
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.footer-info {
+  margin-top: var(--space-md);
+  text-align: center;
+  font-size: 10px;
+  color: var(--phosphor-dim);
+  opacity: 0.6;
+}
+@media (max-width: 767px) {
+  .header-row { flex-direction: column; align-items: stretch; }
+  .title-section { justify-content: center; }
+  .todo-stats { justify-content: center; }
+  .control-panel { flex-direction: column; }
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.todo-item { animation: fadeInUp 0.3s ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+<div class="crt-monitor">
+  <div class="ticker-tape">
+    <div class="ticker-content">
+      <span class="green">[SYS] TODO TERMINAL v4.0.0</span>
+      <span class="amber">[WARN] 拖延检测系统已激活</span>
+      <span class="red">[CRIT] 未完成任务: <span id="ticker-count">0</span></span>
+      <span class="green">[OK] 生产力模块运行中</span>
+      <span class="amber">[INFO] 优先级引擎就绪</span>
+      <span class="green">[SYS] TODO TERMINAL v4.0.0</span>
+      <span class="amber">[WARN] 拖延检测系统已激活</span>
+      <span class="red">[CRIT] 未完成任务: <span id="ticker-count2">0</span></span>
+      <span class="green">[OK] 生产力模块运行中</span>
+      <span class="amber">[INFO] 优先级引擎就绪</span>
+    </div>
+  </div>
+
+  <div class="header-row">
+    <div class="title-section">
+      <span class="terminal-text" style="font-size:20px;font-weight:bold;">STUPID TODO</span>
+      <span class="blinking-cursor" style="font-size:20px;"></span>
+    </div>
+    <div class="todo-stats">
+      <span class="status-led status-led--green" id="stats-led"></span>
+      <span class="terminal-text--dim" id="stats-text">0/0 完成</span>
+    </div>
+  </div>
+
+  <div class="progress-labels">
+    <span class="label-lazy">懒惰</span>
+    <span class="label-productive">高效</span>
+  </div>
+  <div class="retro-progress-track">
+    <div class="retro-progress-fill ultra-pixelated" id="progress-fill" style="width:0%;background:var(--red-alert)"></div>
+  </div>
+
+  <div class="control-panel">
+    <input class="todo-input" id="todo-input" type="text" placeholder="输入新任务..." autofocus>
+    <button class="vintage-btn" id="add-btn">添加</button>
+  </div>
+
+  <div class="filter-bar">
+    <button class="vintage-btn vintage-btn--active" data-filter="all">全部</button>
+    <button class="vintage-btn" data-filter="active">进行中</button>
+    <button class="vintage-btn" data-filter="completed">已完成</button>
+    <button class="vintage-btn vintage-btn--danger" id="clear-btn">清除完成</button>
+  </div>
+
+  <ul class="todo-list" id="todo-list">
+    <li class="empty-state"><span class="terminal-text--dim">终端空闲 — 无待办任务</span></li>
+  </ul>
+
+  <div class="footer-info">
+    <span>STUPID TODO v1.0.0 | 按 Enter 快速添加 |</span>
+    <span id="footer-time">INITIALIZING...</span>
+  </div>
+</div>
+
+<script>
+(function() {
+  let todos = JSON.parse(localStorage.getItem('stupidTodos')) || [];
+  let currentFilter = 'all';
+
+  const els = {
+    input: document.getElementById('todo-input'),
+    addBtn: document.getElementById('add-btn'),
+    list: document.getElementById('todo-list'),
+    progress: document.getElementById('progress-fill'),
+    statsText: document.getElementById('stats-text'),
+    statsLed: document.getElementById('stats-led'),
+    tickerCount: document.getElementById('ticker-count'),
+    tickerCount2: document.getElementById('ticker-count2'),
+    clearBtn: document.getElementById('clear-btn'),
+    footerTime: document.getElementById('footer-time'),
+    filterBtns: document.querySelectorAll('[data-filter]')
+  };
+
+  function save() {
+    localStorage.setItem('stupidTodos', JSON.stringify(todos));
+  }
+
+  function getFiltered() {
+    if (currentFilter === 'active') return todos.filter(t => !t.done);
+    if (currentFilter === 'completed') return todos.filter(t => t.done);
+    return todos;
+  }
+
+  function getActiveCount() {
+    return todos.filter(t => !t.done).length;
+  }
+
+  function getDoneCount() {
+    return todos.filter(t => t.done).length;
+  }
+
+  function render() {
+    const filtered = getFiltered();
+    const total = todos.length;
+    const active = getActiveCount();
+    const done = getDoneCount();
+    const pct = total === 0 ? 0 : Math.round((done / total) * 100);
+
+    els.progress.style.width = pct + '%';
+    els.progress.style.background = pct < 33 ? 'var(--red-alert)' : pct < 66 ? 'var(--amber-warning)' : 'var(--phosphor-green)';
+    els.statsText.textContent = done + '/' + total + ' 完成';
+
+    if (active === 0 && total > 0) {
+      els.statsLed.className = 'status-led status-led--green';
+    } else if (active > 0) {
+      els.statsLed.className = 'status-led status-led--amber';
+    } else {
+      els.statsLed.className = 'status-led status-led--red';
+    }
+
+    els.tickerCount.textContent = active;
+    els.tickerCount2.textContent = active;
+
+    if (filtered.length === 0) {
+      els.list.innerHTML = '<li class="empty-state"><span class="terminal-text--dim">' +
+        (total === 0 ? '终端空闲 — 无待办任务' : '没有匹配的任务') +
+        '</span></li>';
+      return;
+    }
+
+    els.list.innerHTML = '';
+    filtered.forEach(todo => {
+      const li = document.createElement('li');
+      li.className = 'todo-item';
+
+      const check = document.createElement('span');
+      check.className = 'todo-check' + (todo.done ? ' checked' : '');
+      check.textContent = todo.done ? '✓' : '';
+      check.addEventListener('click', function() {
+        todo.done = !todo.done;
+        save();
+        render();
+      });
+
+      const text = document.createElement('span');
+      text.className = 'todo-text' + (todo.done ? ' done' : '');
+      text.textContent = todo.text;
+
+      const del = document.createElement('button');
+      del.className = 'todo-delete';
+      del.textContent = '✕';
+      del.addEventListener('click', function() {
+        todos = todos.filter(t => t !== todo);
+        save();
+        render();
+      });
+
+      li.appendChild(check);
+      li.appendChild(text);
+      li.appendChild(del);
+      els.list.appendChild(li);
+    });
+  }
+
+  function addTodo() {
+    const text = els.input.value.trim();
+    if (!text) return;
+    todos.push({ text: text, done: false, id: Date.now() });
+    els.input.value = '';
+    save();
+    render();
+    els.input.focus();
+  }
+
+  function clearCompleted() {
+    const before = todos.length;
+    todos = todos.filter(t => !t.done);
+    if (todos.length < before) {
+      save();
+      render();
+    }
+  }
+
+  els.input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') addTodo();
+  });
+  els.addBtn.addEventListener('click', addTodo);
+  els.clearBtn.addEventListener('click', clearCompleted);
+
+  els.filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      els.filterBtns.forEach(function(b) { b.classList.remove('vintage-btn--active'); });
+      btn.classList.add('vintage-btn--active');
+      currentFilter = btn.getAttribute('data-filter');
+      render();
+    });
+  });
+
+  function updateClock() {
+    const now = new Date();
+    els.footerTime.textContent = now.toLocaleTimeString('zh-CN', { hour12: false }) + ' CST';
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  render();
+})();
+</script>
+</body>
+</html>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">cddy</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/16/opencode,cs/" title="初次使用 opencode 的体验">初次使用 opencode 的体验</a><time datetime="2026-04-15T16:00:00.000Z" title="发表于 2026-04-16 00:00:00">2026-04-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/03/asd/" title="asd">asd</a><time datetime="2026-04-03T14:04:49.000Z" title="发表于 2026-04-03 22:04:49">2026-04-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/03/nearly%20learn/" title="近期">近期</a><time datetime="2026-04-03T04:39:55.000Z" title="发表于 2026-04-03 12:39:55">2026-04-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/03/first-cddy/" title="first-cddy">first-cddy</a><time datetime="2026-04-03T04:39:55.000Z" title="发表于 2026-04-03 12:39:55">2026-04-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/03/xcxcodingdate/" title="微信小程序开发日志">微信小程序开发日志</a><time datetime="2026-04-03T04:39:55.000Z" title="发表于 2026-04-03 12:39:55">2026-04-03</time></div></div></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-10T09:29:04.645Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By cddy</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><div id="custom-preloader"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/loading.gif" alt="loading"></div><div class="aplayer" data-id="7125382993" data-server="netease" data-type="playlist"></div><script>
+window.addEventListener('load', function() {
+  var preloader = document.getElementById('custom-preloader');
+  if (preloader) {
+    preloader.style.opacity = '0';
+    setTimeout(function() {
+      preloader.style.display = 'none';
+    }, 500);
+  }
+});
+</script>
+<script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
